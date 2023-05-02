@@ -1,10 +1,14 @@
 package ie.tudublin;
 
+import C21416084.*;
+
 public class YofukaVisuals extends Visual
 {
     // Declare Visuals Start
     public Counter counter;
     Title ts;
+    IntroVisual iv;
+    IntroTest it;
 
 
     // Declare Visuals End
@@ -31,6 +35,9 @@ public class YofukaVisuals extends Visual
         // Intialise Visuals Start
         counter = new Counter(this);
         ts = new Title(this);
+
+        iv = new IntroVisual(this);
+        it = new IntroTest(this);
         // Intialise Visuals End
     }
 
@@ -51,6 +58,10 @@ public class YofukaVisuals extends Visual
         if(!counter.playing)
         {
             ts.render();
+        }
+
+        if(counter.playing && counter.seconds() < 6){
+            iv.render();
         }
     }
 }
