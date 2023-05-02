@@ -8,7 +8,6 @@ public class YofukaVisuals extends Visual
     public Counter counter;
     Title ts;
     IntroVisual iv;
-    IntroTest it;
 
 
     // Declare Visuals End
@@ -37,7 +36,6 @@ public class YofukaVisuals extends Visual
         ts = new Title(this);
 
         iv = new IntroVisual(this);
-        it = new IntroTest(this);
         // Intialise Visuals End
     }
 
