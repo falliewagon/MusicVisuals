@@ -6,8 +6,11 @@ public class YofukaVisuals extends Visual
 {
     // Declare Visuals Start
     public Counter counter;
+
     Title ts;
     IntroVisual iv;
+    WaveVisual wv;
+    SkyFall sf;
 
 
     // Declare Visuals End
@@ -23,7 +26,7 @@ public class YofukaVisuals extends Visual
         startMinim();
         strokeWeight(2);
 
-        /* 
+        /*
             Song is Yofukashino Uta by Creepy Nuts
             https://www.youtube.com/watch?v=zArhnXbh3Yc&ab_channel=CreepyNuts-Topic
         */
@@ -36,6 +39,8 @@ public class YofukaVisuals extends Visual
         ts = new Title(this);
 
         iv = new IntroVisual(this);
+        wv = new WaveVisual(this);
+        sf = new SkyFall(this);
         // Intialise Visuals End
     }
 
@@ -60,6 +65,10 @@ public class YofukaVisuals extends Visual
 
         if(counter.playing && counter.seconds() < 6){
             iv.render();
+        }        
+        
+        if (counter.playing && counter.seconds() >= 6 && counter.seconds() <= 13){
+            wv.render();
         }
     }
 }

@@ -4,7 +4,8 @@ import ie.tudublin.*;
 import processing.core.PApplet;
 import processing.core.PConstants;
 
-public class IntroVisual {
+public class IntroVisual 
+{
     YofukaVisuals yv;
     float x = 0;
     float y = 0;
