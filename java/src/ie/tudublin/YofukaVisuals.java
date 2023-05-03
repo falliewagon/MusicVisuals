@@ -11,6 +11,7 @@ public class YofukaVisuals extends Visual
     IntroVisual iv;
     WaveVisual wv;
     SkyFall sf;
+    EclipseOn eo;
 
 
     // Declare Visuals End
@@ -41,6 +42,7 @@ public class YofukaVisuals extends Visual
         iv = new IntroVisual(this);
         wv = new WaveVisual(this);
         sf = new SkyFall(this);
+        eo = new EclipseOn(this);
         // Intialise Visuals End
     }
 
@@ -64,11 +66,12 @@ public class YofukaVisuals extends Visual
         }
 
         //Test Player
-        /* 
-        if(counter.playing && counter.seconds() < 100){
-            sf.render();
+        /*
+        if(counter.playing && counter.seconds() < 500){
+            eo.render();
         } 
         */
+        
 
         
         if(counter.playing && counter.seconds() < 6){
@@ -82,6 +85,12 @@ public class YofukaVisuals extends Visual
         if (counter.playing && counter.seconds() >= 14 && counter.seconds() <= 47){
             sf.render();
         }
+
+        if (counter.playing && counter.seconds() >= 48 && counter.seconds() <= 95){
+            eo.render();
+        }
+        
+        
         
         
         
