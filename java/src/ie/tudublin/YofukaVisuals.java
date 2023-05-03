@@ -12,6 +12,7 @@ public class YofukaVisuals extends Visual
     WaveVisual wv;
     SkyFall sf;
     EclipseOn eo;
+    MultiGlobe mg;
 
 
     // Declare Visuals End
@@ -43,6 +44,7 @@ public class YofukaVisuals extends Visual
         wv = new WaveVisual(this);
         sf = new SkyFall(this);
         eo = new EclipseOn(this);
+        mg = new MultiGlobe(this);
         // Intialise Visuals End
     }
 
@@ -66,14 +68,14 @@ public class YofukaVisuals extends Visual
         }
 
         //Test Player
-        /*
+        
         if(counter.playing && counter.seconds() < 500){
-            eo.render();
+            mg.render();
         } 
-        */
+        
         
 
-        
+        /*
         if(counter.playing && counter.seconds() < 6){
             iv.render();
         }        
@@ -89,6 +91,7 @@ public class YofukaVisuals extends Visual
         if (counter.playing && counter.seconds() >= 48 && counter.seconds() <= 95){
             eo.render();
         }
+        */
         
         
         
