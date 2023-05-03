@@ -6,15 +6,15 @@ import processing.core.PApplet;
 public class WaveVisual
 {
     YofukaVisuals yv;
-    float cy = 0;
-    float f = 0;
+    float sz = 0;
+    float x = 0;
     float[] lerpedBuffer;
     
     public WaveVisual(YofukaVisuals yv)
     {
         this.yv = yv;
-        cy = this.yv.height / 2;
-        f = 0;
+        sz = this.yv.height / 2;
+        x = 0;
         lerpedBuffer = new float[this.yv.width];
     }
     
@@ -22,19 +22,17 @@ public class WaveVisual
     public void render()
     {
         yv.colorMode(PApplet.HSB);
+
         for (int i = 0; i < yv.getAudioBuffer().size(); i++)
         {
             lerpedBuffer[i] = PApplet.lerp(lerpedBuffer[i], yv.getAudioBuffer().get(i), 0.05f);
-            yv.stroke(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, 0) ,0 ,255);
-            float feh = lerpedBuffer[i] * cy * 12.0f;
+            yv.stroke(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, 0) , 0, 255);
 
-            yv.line(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), 0, PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), (0) + (cy *(0.001f*feh))  );
-            yv.line(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), cy + cy, PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), (cy+cy) + (cy *(0.001f*feh))  );
+            float lr = lerpedBuffer[i] * sz * 16.0f;
+
+            yv.line(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), 0, PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), (0) + (sz *(0.001f*lr))  );
+            yv.line(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), sz + sz, PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), (sz+sz) + (sz *(0.001f*lr))  );
         }
-        
     }
-
-        
-
 }
         

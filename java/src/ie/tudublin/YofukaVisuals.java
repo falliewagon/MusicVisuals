@@ -63,6 +63,14 @@ public class YofukaVisuals extends Visual
             ts.render();
         }
 
+        //Test Player
+        /* 
+        if(counter.playing && counter.seconds() < 100){
+            sf.render();
+        } 
+        */
+
+        
         if(counter.playing && counter.seconds() < 6){
             iv.render();
         }        
@@ -70,5 +78,12 @@ public class YofukaVisuals extends Visual
         if (counter.playing && counter.seconds() >= 6 && counter.seconds() <= 13){
             wv.render();
         }
+
+        if (counter.playing && counter.seconds() >= 14 && counter.seconds() <= 47){
+            sf.render();
+        }
+        
+        
+        
     }
 }

@@ -1,7 +1,6 @@
 package C21416084;
 import ie.tudublin.*;
 
-import processing.core.PApplet;
 import processing.core.PConstants;
 
 public class IntroVisual 

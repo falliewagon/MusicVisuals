@@ -1,7 +1,5 @@
 package ie.tudublin;
 
-import C21416084.*;
-
 public class Main
 {	
 
