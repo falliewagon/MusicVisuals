@@ -2,10 +2,10 @@ package ie.tudublin;
 
 public class Counter
 {
+    YofukaVisuals yv;
+
     int start = 0;
     boolean playing = false;
-
-    YofukaVisuals yv;
 
     public Counter(YofukaVisuals yv)
     {
@@ -15,18 +15,13 @@ public class Counter
     public int timeCount()
     {
         int time = (yv.millis()-start);
-
         return time;
     }
-
-
 
     public int seconds()
     {
         return timeCount() / 1000;
     }
-
-
 
     public void start()
     {

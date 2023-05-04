@@ -1,13 +1,15 @@
 package C21416084;
 import ie.tudublin.*;
 
-import processing.core.PApplet;
+import processing.core.*;
 
 public class BlurredVision
 {
     YofukaVisuals yv;
+
     float sz = 0;
     float x = 0;
+
     float[] lerpedBuffer;
     
     public BlurredVision(YofukaVisuals yv)
@@ -16,7 +18,7 @@ public class BlurredVision
 
         sz = this.yv.height / 2;
         x = 0;
-        
+
         lerpedBuffer = new float[this.yv.width];
     }
     

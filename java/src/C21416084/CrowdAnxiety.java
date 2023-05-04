@@ -1,27 +1,32 @@
 package C21416084;
 import ie.tudublin.*;
 
-import processing.core.PApplet;
+import processing.core.*;
 
 public class CrowdAnxiety
 {
     YofukaVisuals yv;
+
     float x = 0;
     float y = 0;
     float t = 0;
+
     float c2 = 0;
     float c3 = 0;
     float c4 = 0;
+
     float diameter  = 10;
     float frequency = 2.0f;
+
     float[] lerpedBuffer;
 
     public CrowdAnxiety(YofukaVisuals yv)
     {
         this.yv = yv;
-        
+
         x = this.yv.width / 2;
         y = this.yv.height;
+
         lerpedBuffer = new float[this.yv.width];
     }
 
@@ -30,6 +35,7 @@ public class CrowdAnxiety
         yv.colorMode(PApplet.HSB);
         yv.strokeWeight(2);
         c4 = 255;
+
         for(int i = 0 ; i < yv.getAudioBuffer().size() ; i++)
         {
             lerpedBuffer[i] = PApplet.lerp(lerpedBuffer[i], yv.getAudioBuffer().get(i), 0.5f);
@@ -45,6 +51,6 @@ public class CrowdAnxiety
                 c3 = 255;
                 c4 = 255;
             }
-        } // end for
+        }
     } // end render
 }

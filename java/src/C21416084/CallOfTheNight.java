@@ -1,11 +1,12 @@
 package C21416084;
 import ie.tudublin.*;
 
-import processing.core.PConstants;
+import processing.core.*;
 
 public class CallOfTheNight
 {
     YofukaVisuals yv;
+
     float x = 0;
     float y = 0;
     float z = 0;
@@ -15,7 +16,7 @@ public class CallOfTheNight
     public CallOfTheNight(YofukaVisuals yv)
     {
         this.yv = yv;
-        
+
         x = this.yv.width;
         y = this.yv.height;
         z = this.yv.height / 2;
@@ -25,6 +26,7 @@ public class CallOfTheNight
     {
         yv.stroke(255);
         yv.strokeWeight(2);
+
         yv.line(x, y/8, x-i, y / 8);
         yv.line(0, y - y / 8, 0 + j, y - y / 8);
 

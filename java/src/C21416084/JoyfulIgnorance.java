@@ -1,18 +1,22 @@
 package C21416084;
 import ie.tudublin.*;
 
-import processing.core.PApplet;
+import processing.core.*;
 
 public class JoyfulIgnorance
 {
     YofukaVisuals yv;
+
     float r = 0;
     float h = 0;
     float t = 0;
+
     float fx;
     float fy;
+
     float diameter  = 10;
     float frequency = 2.0f;
+
     float[] lerpedBuffer;
 
     public JoyfulIgnorance(YofukaVisuals yv)
@@ -42,7 +46,8 @@ public class JoyfulIgnorance
 
             yv.ellipse((PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width)), 2*(lr)*PApplet.sin(frequency*(lr))+h, diameter, diameter);
         }
-        
+
+        // Center Circle
         for(int j = 0; j < yv.getAudioBuffer().size() ; j++)
         {
             yv.noFill();

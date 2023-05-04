@@ -1,6 +1,6 @@
 package ie.tudublin;
 
-import processing.core.PApplet;
+import processing.core.*;
 import ddf.minim.*;
 import ddf.minim.analysis.FFT;
 

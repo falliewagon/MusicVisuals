@@ -1,7 +1,7 @@
 package C21416084;
 import ie.tudublin.*;
 
-import processing.core.PApplet;
+import processing.core.*;
 
 public class DrunkenSpiral
 {
@@ -38,7 +38,7 @@ public class DrunkenSpiral
     public DrunkenSpiral(YofukaVisuals yv)
     {
         this.yv = yv;
-        
+
         x = this.yv.width;
         y = this.yv.height;
     }
@@ -52,7 +52,7 @@ public class DrunkenSpiral
         for (int a = 0; a < 30; a++){
             spin(a);
         } 
-    }
+    } // end render
 
     public void spin(int stagger)
     {
@@ -141,7 +141,6 @@ public class DrunkenSpiral
                 }
             }
 
-            
             if(yv.counter.seconds() < 97.5 & ht > .00003*x )
             {
                 cx = Math.cos(Math.toRadians(0 + stagger*12 + r))*ht;

@@ -45,7 +45,7 @@ public class YofukaVisuals extends Visual
         // Intialise Visuals End
     }
 
-    public void keyPressed()
+    public void keyPressed() // when spacebar is pressed the counter starts and the song plays
     {
         if (key == ' ')
         {
@@ -64,32 +64,34 @@ public class YofukaVisuals extends Visual
             ts.render();
         }
 
-        //Test Player (just remove the /* */ to make it run whichever visual you want to test)
-         /* 
+        // Test Player (just remove the /* */ to make it run whichever visual you want to test)
+        // N.B. Drunken spiral however is specifically timed so you have to play the song as a whole to see it work as intended
+
+        /* 
         if(counter.playing && counter.seconds() < 500){
             ji.render();
         } 
-         */
+        */
         
         // /* 
         if(counter.playing && counter.seconds() < 6){
-            cn.render();
+            cn.render(); // Call of the Night
         }        
         
         if (counter.playing && counter.seconds() >= 6 && counter.seconds() <= 13){
-            bv.render();
+            bv.render(); // Blurred Vision
         }
 
         if (counter.playing && counter.seconds() >= 14 && counter.seconds() <= 47){
-            ca.render();
+            ca.render(); // Crowd Anxiety
         }
 
         if (counter.playing && counter.seconds() >= 48 && counter.seconds() <= 95){
-            ds.render();
+            ds.render(); // Drunken Spiral
         }
 
         if (counter.playing && counter.seconds() >= 97.1 && counter.seconds() <= 130){
-            ji.render();
+            ji.render(); // Joyful Ignorance
         }
         // */
     }
