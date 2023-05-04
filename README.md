@@ -29,5 +29,5 @@ The creation of the counter mechanic was very satisfying for me as the end resul
 
 
 # Youtube Link
-[![YouTube](https://youtu.be/wiyzp8KqHT4)
+https://www.youtube.com/watch?v=wiyzp8KqHT4&ab_channel=FallieWagon
 
