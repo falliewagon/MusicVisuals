@@ -3,7 +3,7 @@ import ie.tudublin.*;
 
 import processing.core.PConstants;
 
-public class IntroVisual 
+public class CallOfTheNight
 {
     YofukaVisuals yv;
     float x = 0;
@@ -12,7 +12,7 @@ public class IntroVisual
     float i = 0;
     float j = 0;
 
-    public IntroVisual(YofukaVisuals yv)
+    public CallOfTheNight(YofukaVisuals yv)
     {
         this.yv = yv;
         x = this.yv.width;

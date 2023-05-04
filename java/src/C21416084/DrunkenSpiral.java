@@ -3,7 +3,7 @@ import ie.tudublin.*;
 
 import processing.core.PApplet;
 
-public class EclipseOn
+public class DrunkenSpiral
 {
     YofukaVisuals yv;
 
@@ -35,7 +35,7 @@ public class EclipseOn
 
     float corner;
 
-    public EclipseOn(YofukaVisuals yv)
+    public DrunkenSpiral(YofukaVisuals yv)
     {
         this.yv = yv;
         x = this.yv.width;

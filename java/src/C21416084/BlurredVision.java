@@ -3,14 +3,14 @@ import ie.tudublin.*;
 
 import processing.core.PApplet;
 
-public class WaveVisual
+public class BlurredVision
 {
     YofukaVisuals yv;
     float sz = 0;
     float x = 0;
     float[] lerpedBuffer;
     
-    public WaveVisual(YofukaVisuals yv)
+    public BlurredVision(YofukaVisuals yv)
     {
         this.yv = yv;
         sz = this.yv.height / 2;

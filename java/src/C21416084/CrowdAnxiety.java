@@ -3,7 +3,7 @@ import ie.tudublin.*;
 
 import processing.core.PApplet;
 
-public class SkyFall
+public class CrowdAnxiety
 {
     YofukaVisuals yv;
     float x = 0;
@@ -16,7 +16,7 @@ public class SkyFall
     float frequency = 2.0f;
     float[] lerpedBuffer;
 
-    public SkyFall(YofukaVisuals yv)
+    public CrowdAnxiety(YofukaVisuals yv)
     {
         this.yv = yv;
         x = this.yv.width / 2;

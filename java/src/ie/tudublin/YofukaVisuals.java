@@ -8,10 +8,10 @@ public class YofukaVisuals extends Visual
     public Counter counter;
 
     Title ts;
-    IntroVisual iv;
-    WaveVisual wv;
-    SkyFall sf;
-    EclipseOn eo;
+    CallOfTheNight cn;
+    BlurredVision bv;
+    CrowdAnxiety ca;
+    DrunkenSpiral ds;
     MultiGlobe mg;
 
 
@@ -40,10 +40,10 @@ public class YofukaVisuals extends Visual
         counter = new Counter(this);
         ts = new Title(this);
 
-        iv = new IntroVisual(this);
-        wv = new WaveVisual(this);
-        sf = new SkyFall(this);
-        eo = new EclipseOn(this);
+        cn = new CallOfTheNight(this);
+        bv = new BlurredVision(this);
+        ca = new CrowdAnxiety(this);
+        ds = new DrunkenSpiral(this);
         mg = new MultiGlobe(this);
         // Intialise Visuals End
     }
@@ -68,30 +68,35 @@ public class YofukaVisuals extends Visual
         }
 
         //Test Player
-        
+        /* 
         if(counter.playing && counter.seconds() < 500){
             mg.render();
         } 
+        */
         
         
 
-        /*
+        // /* 
         if(counter.playing && counter.seconds() < 6){
-            iv.render();
+            cn.render();
         }        
         
         if (counter.playing && counter.seconds() >= 6 && counter.seconds() <= 13){
-            wv.render();
+            bv.render();
         }
 
         if (counter.playing && counter.seconds() >= 14 && counter.seconds() <= 47){
-            sf.render();
+            ca.render();
         }
 
         if (counter.playing && counter.seconds() >= 48 && counter.seconds() <= 95){
-            eo.render();
+            ds.render();
         }
-        */
+
+        if (counter.playing && counter.seconds() >= 96 && counter.seconds() <= 500){
+            //.render();
+        }
+        // */
         
         
         
