@@ -13,8 +13,10 @@ public class BlurredVision
     public BlurredVision(YofukaVisuals yv)
     {
         this.yv = yv;
+
         sz = this.yv.height / 2;
         x = 0;
+        
         lerpedBuffer = new float[this.yv.width];
     }
     
@@ -33,6 +35,6 @@ public class BlurredVision
             yv.line(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), 0, PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), (0) + (sz *(0.001f*lr))  );
             yv.line(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), sz + sz, PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, yv.width), (sz+sz) + (sz *(0.001f*lr))  );
         }
-    }
+    } // end render
 }
         

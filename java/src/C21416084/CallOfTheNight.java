@@ -15,6 +15,7 @@ public class CallOfTheNight
     public CallOfTheNight(YofukaVisuals yv)
     {
         this.yv = yv;
+        
         x = this.yv.width;
         y = this.yv.height;
         z = this.yv.height / 2;
@@ -41,7 +42,5 @@ public class CallOfTheNight
         yv.fill(255, 255, 255);
         yv.textAlign(PConstants.CENTER, PConstants.CENTER);
         yv.text("Yofukashino Uta", x/2, y/2);
-
-
-    }
+    } // end render
 }

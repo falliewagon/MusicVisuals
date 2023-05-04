@@ -19,6 +19,7 @@ public class CrowdAnxiety
     public CrowdAnxiety(YofukaVisuals yv)
     {
         this.yv = yv;
+        
         x = this.yv.width / 2;
         y = this.yv.height;
         lerpedBuffer = new float[this.yv.width];
@@ -32,7 +33,6 @@ public class CrowdAnxiety
         for(int i = 0 ; i < yv.getAudioBuffer().size() ; i++)
         {
             lerpedBuffer[i] = PApplet.lerp(lerpedBuffer[i], yv.getAudioBuffer().get(i), 0.5f);
-            //yv.stroke(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, 255), 255, 255);
             yv.stroke(PApplet.map(i, 0, yv.getAudioBuffer().size(), 0, c2), c3, c4);
 
             float lr = lerpedBuffer[i] * (y / 2) * 12.0f;
@@ -45,7 +45,6 @@ public class CrowdAnxiety
                 c3 = 255;
                 c4 = 255;
             }
-            
-        }
-    }
+        } // end for
+    } // end render
 }

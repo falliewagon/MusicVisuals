@@ -6,15 +6,13 @@ public class YofukaVisuals extends Visual
 {
     // Declare Visuals Start
     public Counter counter;
-
     Title ts;
+
     CallOfTheNight cn;
     BlurredVision bv;
     CrowdAnxiety ca;
     DrunkenSpiral ds;
-    MultiGlobe mg;
-
-
+    JoyfulIgnorance ji;
     // Declare Visuals End
 
     public void settings()
@@ -35,7 +33,6 @@ public class YofukaVisuals extends Visual
 
         loadAudio("YofukashinoUta.mp3");
 
-
         // Intialise Visuals Start
         counter = new Counter(this);
         ts = new Title(this);
@@ -44,7 +41,7 @@ public class YofukaVisuals extends Visual
         bv = new BlurredVision(this);
         ca = new CrowdAnxiety(this);
         ds = new DrunkenSpiral(this);
-        mg = new MultiGlobe(this);
+        ji = new JoyfulIgnorance(this);
         // Intialise Visuals End
     }
 
@@ -67,15 +64,13 @@ public class YofukaVisuals extends Visual
             ts.render();
         }
 
-        //Test Player
-        /* 
+        //Test Player (just remove the /* */ to make it run whichever visual you want to test)
+         /* 
         if(counter.playing && counter.seconds() < 500){
-            mg.render();
+            ji.render();
         } 
-        */
+         */
         
-        
-
         // /* 
         if(counter.playing && counter.seconds() < 6){
             cn.render();
@@ -93,14 +88,9 @@ public class YofukaVisuals extends Visual
             ds.render();
         }
 
-        if (counter.playing && counter.seconds() >= 96 && counter.seconds() <= 500){
-            //.render();
+        if (counter.playing && counter.seconds() >= 97.1 && counter.seconds() <= 130){
+            ji.render();
         }
         // */
-        
-        
-        
-        
-        
     }
 }

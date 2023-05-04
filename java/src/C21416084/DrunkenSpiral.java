@@ -38,6 +38,7 @@ public class DrunkenSpiral
     public DrunkenSpiral(YofukaVisuals yv)
     {
         this.yv = yv;
+        
         x = this.yv.width;
         y = this.yv.height;
     }
@@ -48,11 +49,9 @@ public class DrunkenSpiral
         yv.calculateAverageAmplitude();
         yv.colorMode(PApplet.HSB);
         
-
         for (int a = 0; a < 30; a++){
             spin(a);
         } 
-
     }
 
     public void spin(int stagger)
@@ -60,13 +59,12 @@ public class DrunkenSpiral
         float amp = yv.getSmoothedAmplitude(); 
         
         lH = y/3;
-        lW = x/3; 
+        lW = x/3;
+        mH = y/2;
+        mW = x/2; 
 
         rH = y/3;
         rW = x-(x/3); 
-
-        mH = y/2;
-        mW = x/2; 
 
         yv.strokeWeight(amp*25);
         yv.stroke(400*(amp/2), 400, 400);
